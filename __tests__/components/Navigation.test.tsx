@@ -41,8 +41,8 @@ describe("Navigation", () => {
     render(<Navigation />);
   });
 
-  it("renders logo text", () => {
-    expect(screen.getByText(/Datatym/)).toBeInTheDocument();
+  it("renders logo", () => {
+    expect(screen.getByAltText(/Datatym/)).toBeInTheDocument();
   });
 
   it("renders all nav links", () => {

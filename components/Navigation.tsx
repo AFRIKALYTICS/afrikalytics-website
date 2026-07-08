@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, BarChart3 } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,11 +22,15 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <BarChart3 className="h-8 w-8 text-primary-600" />
-              <span className="font-bold text-xl text-gray-900">
-                Datatym AI
-              </span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/datatym-logo.png"
+                alt="Datatym AI"
+                width={1154}
+                height={218}
+                priority
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 
